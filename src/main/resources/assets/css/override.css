@@ -24,7 +24,25 @@ body div section {
 	width: auto;
 }
 
+/* slick slider css */
+#slide {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.banner {
+	position: relative;
+	height: 400px;
+}
+.center-card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
+.center-card img {
+	max-height: 350px
+}
 
 /* General font-size for this theme is smaller when used with Bootstrap 3, increase the size a bit */
 body {

@@ -1,0 +1,39 @@
+<section id="banner-frontpage">
+    <div id="slide">
+        <div data-th-each="banner: ${banners}" data-th-remove="tag">
+            <div class="banner">
+                <div class="center-card">
+                    <!--Todo add banner image alt text-->
+                    <img class="banner-image" data-th-src="${banner.image}" />
+                    <h2 data-th-text="${banner.title}"></h2>
+                    <p data-th-text="${banner.description}"></p>
+                    <a class="btn btn-large btn-primary"
+                        data-th-if="${banner.linkTarget}"
+                        data-th-href="${banner.linkTarget}"
+                        data-th-text="${banner.linkName}">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $('#slide').slick({
+                arrows: true,
+                dots: true,
+                centerMode: true,
+                centerPadding: "60px",
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakPoint: 768,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: "40px",
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</section>

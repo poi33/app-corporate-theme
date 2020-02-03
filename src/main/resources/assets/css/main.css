@@ -237,23 +237,24 @@ header.navbar .navbar-nav>li>a{
     text-shadow:none;
     white-space: nowrap;
 }
-header.navbar .navbar-nav>li>a:hover{
+header.navbar .navbar-nav>li>a:hover,
+header.navbar .navbar-nav li.nav-item a.nav-link:hover {
     background:transparent;
-    color:#2dcc70;
+    color:#b2473e;
     -webkit-box-shadow:none;
     -moz-box-shadow:none;
     box-shadow:none
 }
 header.navbar .navbar-nav>li.active>a,header.navbar .navbar-nav>li.active>a:hover{
     background:transparent;
-    color:#2dcc70;
+    color:#b2473e;
     -webkit-box-shadow:none;
     -moz-box-shadow:none;
     box-shadow:none
 }
 header.navbar .navbar-nav>li.dropdown.open>a.dropdown-toggle{
     background:transparent;
-    color:#2dcc70
+    color:#b2473e;
 }
 header.navbar .navbar-nav>li.login>a{
     border-left:1px solid #e5e5e5
