@@ -9,7 +9,7 @@
         <allowPath>${site}/*</allowPath>
       </config>
     </input>
-    <input name="portfolioIntro" type="TextArea">
+    <input name="portfolioIntro" type="HtmlArea">
       <label>Description of your work</label>
       <occurrences minimum="0" maximum="1"/>
     </input>

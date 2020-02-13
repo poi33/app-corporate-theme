@@ -34,16 +34,11 @@ exports.get = function (req) {
                     id: hit.linkTo
                 });
             }
-            var linkName = "Learn more";
-            if (hit.linkName)
-                linkName = hit.linkName;
 
             var result = {
                 image: image,
                 title: hit.title1,
-                secondTitle: hit.title2,
                 linkTarget: linkTarget,
-                linkName: linkName,
                 backgroundColor: hit.backgroundColor
             };
 

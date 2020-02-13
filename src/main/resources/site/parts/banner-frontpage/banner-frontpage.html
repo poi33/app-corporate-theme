@@ -3,14 +3,11 @@
         <div data-th-each="banner: ${banners}" data-th-remove="tag">
             <div class="banner">
                 <div class="center-card">
-                    <!--Todo add banner image alt text-->
-                    <img class="banner-image" data-th-src="${banner.image}" />
-                    <h2 data-th-text="${banner.title}"></h2>
-                    <p data-th-text="${banner.description}"></p>
-                    <a class="btn btn-large btn-primary"
-                        data-th-if="${banner.linkTarget}"
-                        data-th-href="${banner.linkTarget}"
-                        data-th-text="${banner.linkName}">Learn more</a>
+                    <a data-th-href="${banner.linkTarget}">
+                        <!--Todo add banner image alt text-->
+                        <img class="banner-image" data-th-src="${banner.image}" />
+                        <h2 data-th-text="${banner.title}"></h2>
+                    </a>
                 </div>
             </div>
         </div>

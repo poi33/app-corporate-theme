@@ -21,10 +21,10 @@
                     <label>Headline</label>
                     <occurrences minimum="0" maximum="1"/>
                 </input>
-                <input type="TextLine" name="description">
+                <!-- <input type="TextLine" name="description">
                     <label>Description</label>
                     <occurrences minimum="0" maximum="1"/>
-                </input>
+                </input> -->
                 <input type="ContentSelector" name="linkTo">
                     <label>Button link</label>
                     <occurrences minimum="0" maximum="1"/>
@@ -33,10 +33,6 @@
                         <allowContentType>landing-page</allowContentType>
                         <allowPath>${site}/*</allowPath>
                     </config>
-                </input>
-                <input type="TextLine" name="linkName">
-                    <label>Button text</label>
-                    <help-text>Set your own text on the button</help-text>
                 </input>
             </items>
         </item-set>
