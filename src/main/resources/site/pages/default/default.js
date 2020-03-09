@@ -1,23 +1,22 @@
 var libs = {
-    portal: require('/lib/xp/portal'),
-    thymeleaf: require('/lib/thymeleaf'),
-    content: require('/lib/xp/content'),
-    menu: require('/lib/menu'),
-    util: require('/lib/util')
+    portal: require("/lib/xp/portal"),
+    thymeleaf: require("/lib/thymeleaf"),
+    content: require("/lib/xp/content"),
+    menu: require("/lib/menu"),
+    util: require("/lib/util")
 };
 
-var view = resolve('default.html');
+var view = resolve("default.html");
 
 //Handle Get request
 exports.get = function (req) {
-
     var content = libs.portal.getContent();
-    if (content.displayName === '') {
-        content.displayName = 'TODO - add display name!';
+    if (content.displayName === "") {
+        content.displayName = "TODO - add display name!";
     }
 
     // Fragment handling (single fragments should use this page controller automatically to render itself)
-    var isFragment = content.type === 'portal:fragment';
+    var isFragment = content.type === "portal:fragment";
     var mainRegion = isFragment ? null : content.page.regions.main;
 
     var site = libs.portal.getSite();
@@ -40,7 +39,7 @@ exports.get = function (req) {
         if (logoKey) {
             var logo = libs.portal.imageUrl({
                 id: siteConfig.logo,
-                scale: 'block(220,80)'
+                scale: "width(440)"
             });
         }
     }
@@ -51,7 +50,9 @@ exports.get = function (req) {
     }
     // Footer content
     // Fetching social media's icons
-    var icons = siteConfig.SocialIcon ? libs.util.data.forceArray(siteConfig.SocialIcon) : null;
+    var icons = siteConfig.SocialIcon
+        ? libs.util.data.forceArray(siteConfig.SocialIcon)
+        : null;
     var iconsList = [];
     if (icons) {
         for (var i = 0; i < icons.length; i++) {
@@ -61,7 +62,9 @@ exports.get = function (req) {
     }
     //Fetching contact information
     var items = [];
-    var companyItems = siteConfig.items ? libs.util.data.forceArray(siteConfig.items) : null;
+    var companyItems = siteConfig.items
+        ? libs.util.data.forceArray(siteConfig.items)
+        : null;
     if (companyItems) {
         for (var j = 0; j < companyItems.length; j++) {
             var itemKey = libs.content.get({
@@ -80,15 +83,15 @@ exports.get = function (req) {
         title: siteConfig.title,
         address: siteConfig.address,
         email: siteConfig.email,
-        phone: siteConfig.phone,
+        phone: siteConfig.phone
     };
     var column2 = {
         title: siteConfig.title2,
-        items: items,
+        items: items
     };
     var column3 = {
         title: siteConfig.title3,
-        freeText: siteConfig.freeText,
+        freeText: siteConfig.freeText
     };
     var socialUrls = {
         facebook: siteConfig.facebook || null,
@@ -125,5 +128,7 @@ exports.get = function (req) {
         isFragment: isFragment
     };
     var body = libs.thymeleaf.render(view, model);
-    return {body: body};
+    return {
+        body: body
+    };
 };

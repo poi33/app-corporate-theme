@@ -3,6 +3,7 @@
         <li class="col-sm-3 col-6" data-th-if="${portfolioList}" data-th-each="item : ${portfolioList}">
             <div class="preview">
                 <img data-th-if="${item.image}" data-th-src="${item.image}" alt="" />
+                <small data-th-text="${item.credit}"></small>
                 <!-- <div class="overlay"></div> -->
                 <!-- <div class="links">
                     <a data-toggle="modal" href="#modal-1" data-th-if="${item.imageFull}" data-th-href="${'#' + item.uniqueId}"><i class="icon-eye-open"></i></a><a data-th-href="${item.url}" data-th-if="${item.url}"><i class="icon-link"></i></a>

@@ -65,13 +65,13 @@ body h3,body h4{
     text-decoration:none
 }
 .btn-primary{
-    background-color:#2dcc70
+    background-color:#b2473e;
 }
 .btn-primary:hover{
-    background-color:#24a259
+    background-color:#a03f37;
 }
 a{
-    color:#2dcc70;
+    color:#3670B4;
     -webkit-transition:300ms;
     -moz-transition:300ms;
     -o-transition:300ms;

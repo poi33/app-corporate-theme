@@ -11,7 +11,6 @@ var view = resolve("portfolio.html");
 
 var CONTENT_TYPE_PORTFOLIO = app.name + ':portfolio';
 
-
 exports.get = function(req) {
     var contents = libs.shared.getContents(CONTENT_TYPE_PORTFOLIO, function() {
         return libs.shared.getAllWithinSite(CONTENT_TYPE_PORTFOLIO);

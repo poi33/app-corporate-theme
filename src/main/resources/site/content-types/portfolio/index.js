@@ -7,6 +7,7 @@ exports.getPortfolioModelFromContent = function (content) {
     return {
         title: content.displayName,
         intro: libs.portal.processHtml({ value: content.data.portfolioIntro }),
+        credit: content.data.photoCredit || "",
         url: content.data.portfolioUrl,
         image: libs.portal.imageUrl({
             id: content.data.portfolioImage,
@@ -17,4 +18,4 @@ exports.getPortfolioModelFromContent = function (content) {
             scale: 'block(1024,768)', // Full size (opens in modal)
         })
     };
-} // function getServicesModelFromContent
+}; // function getServicesModelFromContent

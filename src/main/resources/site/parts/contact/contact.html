@@ -7,34 +7,34 @@
         <div class="row">
 
             <div class="col-md-8 formFields">
-                <h4>Contact Form</h4>
+                <h4>Kontakt skjema</h4>
                 <div class="status alert alert-success" style="display: none"></div>
 
                 <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action=""
                       data-th-action="${portal.componentUrl({})}">
                     <div class="row">
                         <div class="col-md-5">
-                            <label>First Name</label>
+                            <label>Fornavn</label>
                             <input type="text" class="input-block-level post-data" name="firstName" required="required" placeholder="Your First Name">
-                            <label>Last Name</label>
+                            <label>Etternavn</label>
                             <input type="text" class="input-block-level post-data" name="lastName" required="required" placeholder="Your Last Name">
-                            <label>Email Address</label>
+                            <label>Epost</label>
                             <input type="text" class="input-block-level post-data" name="email" required="required" placeholder="Your email address">
                         </div>
                         <div class="col-md-7">
-                            <label>Message</label>
+                            <label>Melding</label>
                             <textarea name="message" id="message" required="required" class="input-block-level post-data" rows="8"></textarea>
                         </div>
 
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large float-right button">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-large float-right button">Send</button>
                     <p> </p>
 
                 </form>
             </div>
 
             <div class="col-md-4">
-                <h4>Our Address</h4>
+                <h4>Vår adresse</h4>
                 <p data-th-text="${text}"></p>
                 <p>
                     <i class="icon-map-marker float-left"></i><span class="contactInfo"  data-th-text="${address}"></span>

@@ -38,33 +38,6 @@ body div section {
 	width: auto;
 }
 
-/* slick slider css */
-#slide {
-	margin-left : 20%;
-	margin-right: 20%;
-}
-
-.banner {
-	position: relative;
-	height  : 400px;
-}
-
-.center-card {
-	position  : absolute;
-	top       : 50%;
-	left      : 50%;
-	transform : translate(-50%, -50%);
-	text-align: center;
-}
-
-.center-card img {
-	max-height: 350px
-}
-
-.center-card a {
-	color: black;
-}
-
 /* General font-size for this theme is smaller when used with Bootstrap 3, increase the size a bit */
 body {
 	font-size: 14px;
@@ -373,6 +346,28 @@ header.navbar .nav>li.in-path>a:hover {
 	max-width: 100%;
 	min-width: 100%;
 }
+
+/* Banner front page */
+#banner-frontpage {
+	margin-left : 20%;
+	margin-right: 20%;
+}
+
+#banner-frontpage .center-card {
+	padding: 0 2px;
+	max-width: 90vw;
+	padding: 0 6px;
+}
+
+#banner-frontpage .center-card a {
+	display: block;
+	text-align: center;
+}
+
+#banner-frontpage .center-card a .banner-image {
+	width: 100%;
+}
+
 
 /* Bottom spacing on front page */
 #services,

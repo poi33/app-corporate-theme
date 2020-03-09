@@ -9,6 +9,10 @@
         <allowPath>${site}/*</allowPath>
       </config>
     </input>
+    <input name="photoCredit" type="TextLine">
+      <label>Photo credit</label>
+      <occurrences minimum="0" maximum="1"/>
+    </input>
     <input name="portfolioIntro" type="HtmlArea">
       <label>Description of your work</label>
       <occurrences minimum="0" maximum="1"/>
